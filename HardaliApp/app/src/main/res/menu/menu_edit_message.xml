@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/microphone"
+        android:icon="@drawable/ic_mic_black"
+        android:title="Μικροφωνο"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_addcode"
+        android:icon="@drawable/new_codes"
+        android:title="Νέα Μηνύματα"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_editcode"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Νέα Μηνύματα"
+        app:showAsAction="always" />
+
+
+</menu>

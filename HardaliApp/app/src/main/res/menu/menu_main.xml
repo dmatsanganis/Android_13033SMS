@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.dmatsanganis.MainActivity">
+
+    <item
+        android:id="@+id/action_info"
+        android:icon="@drawable/ic_round_info"
+        android:title="Πληροφορίες"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_user_profile"
+        android:icon="@drawable/ic_round_account_circle"
+        android:title="Προφίλ Χρήστη"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_newcodes"
+        android:icon="@drawable/new_codes"
+        android:title="Νέα Μηνύματα"
+        app:showAsAction="always" />
+
+</menu>
