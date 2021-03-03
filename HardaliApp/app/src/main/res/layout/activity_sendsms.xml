@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SendSMS">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mic_sendSMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/color_accent"
+        android:backgroundTint="@color/color_primary"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/previewSMSfab"
+        app:srcCompat="@drawable/ic_mic_white"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollViewMain"
+        android:layout_width="410dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewReason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:text="Επιλογή Μηνύματος"
+                android:textColor="?colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewReasonSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textViewReason"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_horizontal"
+                android:text="Πατήστε το μήνυμα εξόδου που επιθυμείτε από τα ακόλουθα ή προσθέστε κάποια νέα επιλογή!"
+                android:textAlignment="center" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollViewReason"
+                android:layout_width="match_parent"
+                android:layout_height="188dp"
+                android:layout_below="@+id/textViewReasonSubtitle"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardReason1"
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:alpha="0.6"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/reason1" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:alpha="0.7"
+                                android:src="@drawable/gradient_shadow_text" />
+
+                            <TextView
+                                android:id="@+id/textReason1Number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="1."
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="10dp"
+                                android:layout_toEndOf="@+id/textReason1Number"
+                                android:layout_toRightOf="@+id/textReason1Number"
+                                android:gravity="center_horizontal"
+                                android:text="Φαρμακείο - Ιατρείο"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonInfoReason1"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardReason1"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="-10dp"
+                        android:text="Πληροφορίες"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textCursorDrawable="@drawable/ic_launcher_background"
+                        app:icon="@drawable/ic_round_info" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardReason2"
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@+id/cardReason1"
+                        android:layout_toRightOf="@+id/cardReason1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:alpha="0.6"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/reason2" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:alpha="0.7"
+                                android:src="@drawable/gradient_shadow_text" />
+
+                            <TextView
+                                android:id="@+id/textReason2Number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="2."
+                                android:textColor="@android:color/white"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="10dp"
+                                android:layout_toEndOf="@+id/textReason2Number"
+                                android:layout_toRightOf="@+id/textReason2Number"
+                                android:gravity="center_horizontal"
+                                android:text="Κατάστημα προμήθειας αγαθών"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonInfoReason2"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardReason1"
+                        android:layout_marginTop="-10dp"
+                        android:layout_toEndOf="@+id/cardReason1"
+                        android:layout_toRightOf="@+id/cardReason1"
+                        android:text="Πληροφορίες"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        app:icon="@drawable/ic_round_info" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardReason3"
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@+id/cardReason2"
+                        android:layout_toRightOf="@+id/cardReason2"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:alpha="0.6"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/reason3" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:alpha="0.7"
+                                android:src="@drawable/gradient_shadow_text" />
+
+                            <TextView
+                                android:id="@+id/textReason3Number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="3."
+                                android:textColor="@android:color/white"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="10dp"
+                                android:layout_toEndOf="@+id/textReason3Number"
+                                android:layout_toRightOf="@+id/textReason3Number"
+                                android:gravity="center_horizontal"
+                                android:text="Τράπεζα"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonInfoReason3"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardReason1"
+                        android:layout_marginTop="-10dp"
+                        android:layout_toEndOf="@+id/cardReason2"
+                        android:layout_toRightOf="@+id/cardReason2"
+                        android:text="Πληροφορίες"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        app:icon="@drawable/ic_round_info" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardReason4"
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@+id/cardReason3"
+                        android:layout_toRightOf="@+id/cardReason3"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:alpha="0.6"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/reason4" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:alpha="0.7"
+                                android:src="@drawable/gradient_shadow_text" />
+
+                            <TextView
+                                android:id="@+id/textReason4Number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="4."
+                                android:textColor="@android:color/white"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="10dp"
+                                android:layout_toEndOf="@+id/textReason4Number"
+                                android:layout_toRightOf="@+id/textReason4Number"
+                                android:gravity="center_horizontal"
+                                android:text="Παροχή βοήθειας"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonInfoReason4"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardReason1"
+                        android:layout_marginTop="-10dp"
+                        android:layout_toEndOf="@+id/cardReason3"
+                        android:layout_toRightOf="@+id/cardReason3"
+                        android:text="Πληροφορίες"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        app:icon="@drawable/ic_round_info" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardReason5"
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@+id/cardReason4"
+                        android:layout_toRightOf="@+id/cardReason4"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:alpha="0.6"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/reason5" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:alpha="0.7"
+                                android:src="@drawable/gradient_shadow_text" />
+
+                            <TextView
+                                android:id="@+id/textReason5Number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="5."
+                                android:textColor="@android:color/white"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="10dp"
+                                android:layout_toEndOf="@+id/textReason5Number"
+                                android:layout_toRightOf="@+id/textReason5Number"
+                                android:gravity="center_horizontal"
+                                android:text="Τελετή - Γονείς σε διάσταση"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonInfoReason5"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardReason1"
+                        android:layout_marginTop="-10dp"
+                        android:layout_toEndOf="@+id/cardReason4"
+                        android:layout_toRightOf="@+id/cardReason4"
+                        android:text="Πληροφορίες"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        app:icon="@drawable/ic_round_info" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardReason6"
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@+id/cardReason5"
+                        android:layout_toRightOf="@+id/cardReason5"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:alpha="0.6"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/reason6" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:alpha="0.7"
+                                android:src="@drawable/gradient_shadow_text" />
+
+                            <TextView
+                                android:id="@+id/textReason6Number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="6."
+                                android:textColor="@android:color/white"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="10dp"
+                                android:layout_toEndOf="@+id/textReason6Number"
+                                android:layout_toRightOf="@+id/textReason6Number"
+                                android:gravity="center_horizontal"
+                                android:text="Άθληση - Ανάγκες κατοικίδιου"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonInfoReason6"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardReason1"
+                        android:layout_marginTop="-10dp"
+                        android:layout_toEndOf="@+id/cardReason5"
+                        android:layout_toRightOf="@+id/cardReason5"
+                        android:text="Πληροφορίες"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        app:icon="@drawable/ic_round_info" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardReason7"
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@+id/cardReason6"
+                        android:layout_toRightOf="@+id/cardReason6"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:alpha="0.6"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/reason7" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:alpha="0.7"
+                                android:src="@drawable/gradient_shadow_text" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="10dp"
+                                android:layout_toEndOf="@+id/textReason7Number"
+                                android:layout_toRightOf="@+id/textReason7Number"
+                                android:gravity="center_horizontal"
+                                android:text="Προσθήκη - Επεξεργασία Μηνυμάτων"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonInfoReason7"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardReason1"
+                        android:layout_marginTop="-10dp"
+                        android:layout_toEndOf="@+id/cardReason6"
+                        android:layout_toRightOf="@+id/cardReason6"
+                        android:text="Πληροφορίες"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        app:icon="@drawable/ic_round_info" />
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/previewSMSfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="25dp"
+        android:text="Αποστολή"
+        android:textColor="@android:color/white"
+        app:backgroundTint="?colorPrimary"
+        app:icon="@android:drawable/ic_menu_send"
+        app:iconTint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:liftOnScroll="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?android:attr/windowBackground"
+            android:foregroundTint="#0A776D"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:subtitleTextColor="#0A776D"
+            app:title="Καλώς ορίσατε, p17068"
+            app:titleTextColor="#0A776D" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textViewPersonal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Προσωπικά Στοιχεία"
+        android:textColor="?colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="388dp"
+        android:layout_height="305dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo3">
+
+            <TextView
+                android:id="@+id/textViewPersonalElements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Δείτε τα προσωπικά σας στοιχεία και επεξεργαστείτε τα πατώντας την αντίστοιχη ένδειξη στο πάνω δεξιά μέρος της εφαρμογής!"
+                android:textAlignment="center" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                app:boxStrokeWidth="2dp"
+                app:startIconDrawable="@drawable/ic_round_account_circle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:hint="Ονοματεπώνυμο " />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                app:boxStrokeWidth="2dp"
+                app:startIconDrawable="@android:drawable/sym_action_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:editable="false"
+                    android:hint="Διεύθυνση Email" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutLocation"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="362dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                app:boxStrokeWidth="2dp"
+                app:startIconDrawable="@drawable/ic_round_location">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputLocation"
+                    android:layout_width="349dp"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:hint="Διεύθυνση Κατοικίας "
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
