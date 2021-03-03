@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/alert_no_corners">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="385dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/smsButtonCancel"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smsPreview"
+            android:layout_alignBaseline="@id/smsButtonSend"
+            android:layout_alignParentRight="false"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toStartOf="@+id/smsButtonSend"
+            android:layout_toLeftOf="@id/smsButtonSend"
+            android:text="Ακύρωση"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:backgroundTint="?colorPrimary"
+            app:icon="@drawable/ic_round_cancel_message"
+            app:iconTint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/smsPreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smsAlertName"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_horizontal"
+            android:text="@string/sms_13033_pattern"
+            android:textAlignment="center"
+            android:textColor="?colorPrimary"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/smsIntroText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/smsIntroLogo"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:drawableStart="@drawable/sms_confirm"
+            android:gravity="center_horizontal"
+            android:text="@string/sms_confirm_title"
+            android:textAlignment="center"
+            android:textColor="?colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/smsIntroLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:drawableStart="@drawable/hardaliapp_logo"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="?colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/smsAlertName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smsIntroText"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_horizontal"
+            android:text="@string/sms_confirm_text"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/smsButtonSend"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smsPreview"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="false"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="135dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/sms_confirm_send"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:backgroundTint="?colorPrimary"
+            app:icon="@android:drawable/ic_menu_send"
+            app:iconTint="@android:color/white" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
