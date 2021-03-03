@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/alert_no_corners">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="0dp">
+
+        <LinearLayout
+            android:id="@+id/linear_editmessage"
+            android:layout_width="match_parent"
+            android:layout_height="223dp"
+            android:layout_below="@id/alerteditAlertName"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:context=".AddMessage">
+
+            <EditText
+                android:id="@+id/edittext_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableStart="@android:drawable/sym_action_email"
+                android:hint=" Kωδικός Μηνύματος"
+                android:inputType="number" />
+
+
+            <EditText
+                android:id="@+id/edittext_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableStart="@android:drawable/ic_menu_edit"
+                android:hint=" Τίτλος Κωδικού" />
+
+
+            <EditText
+                android:id="@+id/edittext_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableStart="@android:drawable/ic_menu_edit"
+                android:hint=" Περιγραφή Κωδικού" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/alerteditIntroText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alerteditIntroLogo"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:drawableStart="@android:drawable/sym_action_email"
+            android:gravity="center_horizontal"
+            android:text="Προσθήκη Νέου Μηνύματος"
+            android:textAlignment="center"
+            android:textColor="?colorPrimary"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/alerteditIntroLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="84dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:drawableStart="@drawable/hardaliapp_logo"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="?colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/alerteditAlertName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alerteditIntroText"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_horizontal"
+            android:text=" Προσθέστε κάποιον νέο κωδικό μετακίνησης συμπληρώνοντας τα στοιχεία παρακάτω"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/alerteditAlertButtonClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_view"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-51dp"
+            android:text="Ακύρωση"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:backgroundTint="?colorPrimary"
+            app:icon="@drawable/ic_round_keyboard_backspace"
+            app:iconTint="@android:color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_add"
+            android:layout_width="260dp"
+            android:layout_height="59dp"
+            android:layout_below="@id/linear_editmessage"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="false"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="83dp"
+            android:layout_marginBottom="206dp"
+            android:text="Προσθήκη Κωδικού"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textStyle="bold"
+            app:icon="@android:drawable/ic_menu_add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_view"
+            android:layout_width="260dp"
+            android:layout_height="59dp"
+            android:layout_below="@+id/button_add"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-200dp"
+            android:layout_marginEnd="77dp"
+            android:layout_marginBottom="83dp"
+            android:text="Επεξεργασία Μηνυμάτων"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textStyle="bold"
+            app:icon="@android:drawable/ic_menu_view" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mic_add_message"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignBottom="@+id/alerteditAlertButtonClose"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="-24dp"
+            android:layout_toEndOf="@+id/alerteditAlertButtonClose"
+            android:background="@color/color_accent"
+            android:backgroundTint="@color/color_primary"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:srcCompat="@drawable/ic_mic_white"
+            tools:ignore="MissingConstraints" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
