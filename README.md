@@ -9,3 +9,11 @@ This project was conceived and executed as part of the course "Modern Software T
 1. **User-Friendly Interface**: Provides a simple and intuitive user experience, making it easy for anyone to register their movement.
 2. **Automated SMS Sending**: Automates the process of sending the required SMS to 13033, reducing the potential for human error.
 3. **Contribution to Community Wellbeing**: By making movement registration easier, HardaliApp contributes to public health efforts to control the spread of COVID-19.
+
+## Contributors
+
+- [x] [Dimitris Matsanganis](https://github.com/dmatsanganis)
+
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
+![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
+![Android](https://img.shields.io/badge/android-%3DDC84.svg?style=for-the-badge&logo=android&logoColor=white)
